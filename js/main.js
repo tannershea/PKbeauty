@@ -142,6 +142,62 @@
 
   document.querySelectorAll("[data-compare]").forEach(initCompare);
 
+  /* Waxing gallery: enlarge in lightbox dialog */
+  var waxLightbox = document.getElementById("waxing-lightbox");
+  var waxServices = document.getElementById("waxing-services");
+  if (waxLightbox && waxServices) {
+    var lightboxImg = waxLightbox.querySelector(".lightbox__img");
+    var canModal = typeof waxLightbox.showModal === "function";
+
+    function setLbScrollLock(on) {
+      document.documentElement.style.overflow = on ? "hidden" : "";
+    }
+
+    waxServices.querySelectorAll(".gallery__zoom-trigger").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var sm = btn.querySelector("img");
+        if (!sm || !lightboxImg) return;
+        var src = sm.currentSrc || sm.src;
+        var alt = sm.getAttribute("alt") || "";
+
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+
+        if (canModal) {
+          try {
+            waxLightbox.showModal();
+            setLbScrollLock(true);
+            requestAnimationFrame(function () {
+              var closeBtn = waxLightbox.querySelector(".lightbox__close");
+              if (closeBtn) closeBtn.focus();
+            });
+            return;
+          } catch (_err) {
+            /* Some file:// or older contexts block modal dialogs */
+          }
+        }
+
+        window.open(src, "_blank", "noopener,noreferrer");
+      });
+    });
+
+    if (canModal) {
+      waxLightbox.addEventListener("close", function () {
+        setLbScrollLock(false);
+        if (lightboxImg) {
+          lightboxImg.removeAttribute("src");
+          lightboxImg.alt = "";
+        }
+      });
+
+      waxLightbox.querySelectorAll("[data-lightbox-close]").forEach(function (el) {
+        el.addEventListener("click", function () {
+          waxLightbox.close();
+        });
+      });
+    }
+  }
+
   /* Contact form — opens user's email client with a prefilled message */
   var contactForm = document.querySelector("[data-contact-form]");
   if (contactForm) {

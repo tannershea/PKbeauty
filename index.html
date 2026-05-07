@@ -25,8 +25,8 @@
       </button>
       <ul class="nav__menu" id="nav-menu">
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a class="nav__cta" href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">Book now</a></li>
       </ul>
@@ -132,31 +132,37 @@
       </div>
     </section>
 
-    <section class="section gallery" id="gallery" aria-labelledby="gallery-heading">
+    <section class="section gallery gallery--contain" id="waxing-services" aria-labelledby="waxing-services-heading">
       <div class="section__header reveal" data-reveal>
-        <h2 id="gallery-heading" class="section__title section__title--split">
-          <span class="script">Client</span> <span class="caps serif">Gallery</span>
+        <h2 id="waxing-services-heading" class="section__title section__title--split">
+          <span class="script">Waxing</span> <span class="caps serif">Services</span>
         </h2>
-        <p class="section__lede">Moments from the treatment room. Replace with your own photography.</p>
+        <p class="section__lede">Before and after results from brow and body waxing.</p>
       </div>
       <div class="gallery__grid">
         <figure class="gallery__item reveal" data-reveal>
           <div class="gallery__frame">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="Facial treatment in progress (placeholder)" loading="lazy" width="800" height="600" />
+            <button type="button" class="gallery__zoom-trigger" aria-label="View larger photo: eyebrow waxing and tinting">
+              <img src="images/waxing-eyebrow-tint.png" alt="Before and after eyebrow waxing and tinting, brows look fuller and more defined" loading="lazy" width="828" height="814" decoding="async" />
+            </button>
           </div>
-          <figcaption>Treatment detail</figcaption>
+          <figcaption>Eyebrow waxing &amp; tinting</figcaption>
         </figure>
         <figure class="gallery__item reveal" data-reveal data-reveal-delay="1">
           <div class="gallery__frame">
-            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80" alt="Relaxing spa moment (placeholder)" loading="lazy" width="800" height="600" />
+            <button type="button" class="gallery__zoom-trigger" aria-label="View larger photo: underarm wax">
+              <img src="images/waxing-underarm.png" alt="Before and after underarm wax, smooth skin after hair removal" loading="lazy" width="828" height="819" decoding="async" />
+            </button>
           </div>
-          <figcaption>Relaxation</figcaption>
+          <figcaption>Underarm wax</figcaption>
         </figure>
         <figure class="gallery__item reveal" data-reveal data-reveal-delay="2">
           <div class="gallery__frame">
-            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Facial massage (placeholder)" loading="lazy" width="800" height="600" />
+            <button type="button" class="gallery__zoom-trigger" aria-label="View larger photo: eyebrow wax">
+              <img src="images/waxing-eyebrow.png" alt="Before and after eyebrow wax, neatly shaped brows" loading="lazy" width="828" height="828" decoding="async" />
+            </button>
           </div>
-          <figcaption>Hands-on care</figcaption>
+          <figcaption>Eyebrow wax</figcaption>
         </figure>
       </div>
     </section>
@@ -298,26 +304,14 @@
         <p class="site-footer__tagline">Empowering you to feel confident in your own skin.</p>
         <p class="site-footer__label">Licensed Esthetician</p>
         <p class="site-footer__about">Personalized skincare and waxing in Trumbull, Connecticut. A balanced approach where effective results meet calm, intentional relaxation.</p>
-        <ul class="site-footer__socials">
-          <li>
-            <a class="site-footer__social" href="https://instagram.com/pkbeauty2025" target="_blank" rel="noopener noreferrer" aria-label="Instagram, @pkbeauty2025">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
-            </a>
-          </li>
-          <li>
-            <a class="site-footer__social" href="#" aria-label="Facebook, add your page URL">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-            </a>
-          </li>
-        </ul>
       </div>
 
       <nav class="site-footer__col reveal" data-reveal data-reveal-delay="1" aria-label="Site navigation">
         <h2 class="site-footer__heading">Explore</h2>
         <ul class="site-footer__links">
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">Book Online</a></li>
         </ul>
@@ -347,6 +341,18 @@
             </span>
             <a href="mailto:pkbeauty25@icloud.com">pkbeauty25@icloud.com</a>
           </li>
+          <li>
+            <span class="site-footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <a href="https://instagram.com/pkbeauty2025" target="_blank" rel="noopener noreferrer" aria-label="Instagram @pkbeauty2025"><span class="site-footer__handle">@pkbeauty2025</span></a>
+          </li>
+          <li>
+            <span class="site-footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </span>
+            <a href="https://www.facebook.com/pkbeauty2025" target="_blank" rel="noopener noreferrer" aria-label="Facebook pkbeauty2025"><span class="site-footer__handle">pkbeauty2025</span></a>
+          </li>
         </ul>
       </div>
 
@@ -364,6 +370,16 @@
       <p class="site-footer__legal">© <span id="year"></span> PK Beauty · Trumbull, Connecticut</p>
     </div>
   </footer>
+
+  <dialog id="waxing-lightbox" class="lightbox" aria-label="Enlarged waxing photo">
+    <div class="lightbox__scrim" data-lightbox-close tabindex="-1" aria-hidden="true"></div>
+    <div class="lightbox__panel">
+      <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close enlarged photo">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <img class="lightbox__img" alt="" decoding="async" />
+    </div>
+  </dialog>
 
   <script src="js/main.js" defer></script>
 </body>

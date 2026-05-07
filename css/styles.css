@@ -810,6 +810,7 @@ img {
   background: linear-gradient(to top, rgba(75, 54, 33, 0.35), transparent 45%);
   opacity: 0;
   transition: opacity 0.45s;
+  pointer-events: none;
 }
 
 .gallery__item:hover .gallery__frame::after {
@@ -833,6 +834,135 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--bronze);
+}
+
+.gallery--contain .gallery__frame {
+  aspect-ratio: 1 / 1;
+  background: var(--white);
+  border: 3px solid var(--logo-gold);
+  box-sizing: border-box;
+}
+
+.gallery--contain .gallery__zoom-trigger {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: zoom-in;
+  font: inherit;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.gallery--contain .gallery__zoom-trigger:focus-visible {
+  outline: 2px solid var(--gold-script);
+  outline-offset: 3px;
+}
+
+.gallery--contain .gallery__zoom-trigger img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  vertical-align: bottom;
+}
+
+.gallery--contain .gallery__item:hover .gallery__zoom-trigger img {
+  transform: none;
+}
+
+/* Waxing enlargement (native dialog; home page only) */
+.lightbox {
+  padding: 0;
+  border: none;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.lightbox::backdrop {
+  background: transparent;
+}
+
+.lightbox__scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 38, 30, 0.78);
+  backdrop-filter: blur(5px);
+}
+
+.lightbox__panel {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2.5rem, 6vw, 3.5rem) clamp(1rem, 4vw, 2rem);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.lightbox__panel .lightbox__close,
+.lightbox__panel .lightbox__img {
+  pointer-events: auto;
+}
+
+.lightbox__close {
+  position: fixed;
+  top: clamp(0.75rem, 3vw, 1.25rem);
+  right: clamp(0.75rem, 3vw, 1.25rem);
+  z-index: 2;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--logo-gold);
+  background: var(--cream);
+  color: var(--chocolate);
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.lightbox__close:hover {
+  background: var(--white);
+  border-color: var(--gold-script);
+  color: var(--gold-script);
+}
+
+.lightbox__close:focus-visible {
+  outline: 2px solid var(--gold-script);
+  outline-offset: 3px;
+}
+
+.lightbox__img {
+  display: block;
+  max-width: min(94vw, 1024px);
+  max-height: min(88vh, 1024px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 3px solid var(--logo-gold);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 28px 70px rgba(30, 24, 18, 0.45);
+  background: var(--white);
 }
 
 /* ——— Before / After ——— */
@@ -1370,44 +1500,6 @@ img {
   max-width: 32ch;
 }
 
-.site-footer__socials {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 0.6rem;
-}
-
-.site-footer__social {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid rgba(139, 115, 85, 0.35);
-  background: transparent;
-  color: var(--bronze-deep);
-  text-decoration: none;
-  transition:
-    border-color 0.25s var(--ease-out),
-    color 0.25s,
-    transform 0.25s,
-    background 0.25s;
-}
-
-.site-footer__social:hover {
-  border-color: var(--gold-script);
-  color: var(--gold-script);
-  background: rgba(166, 139, 91, 0.08);
-  transform: translateY(-2px);
-}
-
-.site-footer__social svg {
-  width: 16px;
-  height: 16px;
-}
-
 /* Heading + columns */
 .site-footer__col {
   display: flex;
@@ -1495,6 +1587,16 @@ img {
   color: var(--bronze);
   font-style: italic;
   margin-top: 0.15rem;
+}
+
+.site-footer__handle {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.site-footer__contact a:hover .site-footer__handle {
+  color: inherit;
 }
 
 /* Hours column */
