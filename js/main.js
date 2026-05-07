@@ -141,4 +141,52 @@
   }
 
   document.querySelectorAll("[data-compare]").forEach(initCompare);
+
+  /* Contact form — opens user's email client with a prefilled message */
+  var contactForm = document.querySelector("[data-contact-form]");
+  if (contactForm) {
+    var status = contactForm.querySelector("[data-contact-status]");
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (typeof contactForm.checkValidity === "function" && !contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      var data = new FormData(contactForm);
+      var name = (data.get("name") || "").toString().trim();
+      var email = (data.get("email") || "").toString().trim();
+      var phone = (data.get("phone") || "").toString().trim();
+      var service = (data.get("service") || "").toString().trim();
+      var message = (data.get("message") || "").toString().trim();
+
+      var lines = [];
+      if (name) lines.push("Name: " + name);
+      if (email) lines.push("Email: " + email);
+      if (phone) lines.push("Phone: " + phone);
+      if (service) lines.push("Service of interest: " + service);
+      lines.push("");
+      lines.push("Message:");
+      lines.push(message);
+
+      var to = contactForm.getAttribute("data-contact-to") || "pkbeauty25@icloud.com";
+      var subject = "Inquiry from " + (name || "PK Beauty website");
+      var href =
+        "mailto:" +
+        encodeURIComponent(to) +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(lines.join("\n"));
+
+      if (status) {
+        status.textContent = "Opening your email app to send the message…";
+        status.classList.add("is-visible");
+      }
+
+      window.location.href = href;
+    });
+  }
 })();

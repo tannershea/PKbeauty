@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PK Beauty — Paulina | Esthetician | Trumbull, CT</title>
+  <title>PK Beauty | Paulina | Esthetician | Trumbull, CT</title>
   <meta name="description" content="PK Beauty offers personalized skincare in Trumbull, Connecticut. Book your appointment with licensed esthetician Paulina." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
 <body>
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary">
-      <a class="nav__brand wordmark wordmark--nav" href="#top" aria-label="PK Beauty — home">
+      <a class="nav__brand wordmark wordmark--nav" href="#top" aria-label="PK Beauty home">
         <span class="wordmark__pk">PK</span>
         <span class="wordmark__beauty">Beauty</span>
       </a>
@@ -24,14 +24,11 @@
         <span class="visually-hidden">Menu</span>
       </button>
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#prep">Prep</a></li>
-        <li><a href="#before-after">Results</a></li>
-        <li><a href="#policies">Policies</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="nav__cta" href="#book">Book now</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav__cta" href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">Book now</a></li>
       </ul>
     </nav>
   </header>
@@ -127,6 +124,12 @@
           <p>Calming touch and ambiance so you leave feeling renewed inside and out.</p>
         </li>
       </ul>
+      <div class="services__more reveal" data-reveal>
+        <a class="services__more-link" href="services.html">
+          View full menu &amp; pricing
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </section>
 
     <section class="section gallery" id="gallery" aria-labelledby="gallery-heading">
@@ -134,24 +137,24 @@
         <h2 id="gallery-heading" class="section__title section__title--split">
           <span class="script">Client</span> <span class="caps serif">Gallery</span>
         </h2>
-        <p class="section__lede">Moments from the treatment room — replace with your own photography.</p>
+        <p class="section__lede">Moments from the treatment room. Replace with your own photography.</p>
       </div>
       <div class="gallery__grid">
         <figure class="gallery__item reveal" data-reveal>
           <div class="gallery__frame">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="Facial treatment in progress — placeholder" loading="lazy" width="800" height="600" />
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="Facial treatment in progress (placeholder)" loading="lazy" width="800" height="600" />
           </div>
           <figcaption>Treatment detail</figcaption>
         </figure>
         <figure class="gallery__item reveal" data-reveal data-reveal-delay="1">
           <div class="gallery__frame">
-            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80" alt="Relaxing spa moment — placeholder" loading="lazy" width="800" height="600" />
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80" alt="Relaxing spa moment (placeholder)" loading="lazy" width="800" height="600" />
           </div>
           <figcaption>Relaxation</figcaption>
         </figure>
         <figure class="gallery__item reveal" data-reveal data-reveal-delay="2">
           <div class="gallery__frame">
-            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Facial massage — placeholder" loading="lazy" width="800" height="600" />
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Facial massage (placeholder)" loading="lazy" width="800" height="600" />
           </div>
           <figcaption>Hands-on care</figcaption>
         </figure>
@@ -183,139 +186,94 @@
       </div>
       <div class="ba__grid">
         <article class="ba-card reveal" data-reveal>
-          <h3 class="ba-card__label">Result 1</h3>
+          <h3 class="ba-card__label">Microderm Abrasion</h3>
           <div class="compare" data-compare>
             <div class="compare__after" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/microderm-1-after.png" alt="Skin after Microderm Abrasion treatment, smoother, more refined texture" loading="lazy" width="726" height="912" />
             </div>
             <div class="compare__before" data-compare-before>
-              <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/microderm-1-before.png" alt="Skin before Microderm Abrasion treatment" loading="lazy" width="757" height="903" />
             </div>
-            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Before and after comparison 1" tabindex="0">
+            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Microderm Abrasion before and after comparison" tabindex="0">
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">After on the right, before on the left — swap <code class="ba-card__code">src</code> values to match your files.</p>
+          <p class="ba-card__caption">Drag the handle to reveal smoother, more refined skin after a Microderm Abrasion treatment.</p>
         </article>
         <article class="ba-card reveal" data-reveal data-reveal-delay="1">
-          <h3 class="ba-card__label">Result 2</h3>
+          <h3 class="ba-card__label">Clarifying Back Treatment</h3>
           <div class="compare" data-compare>
             <div class="compare__after" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/clarifying-back-5-after.png" alt="Back skin after Clarifying Back Treatment, clearer, more even tone" loading="lazy" width="758" height="988" />
             </div>
             <div class="compare__before" data-compare-before>
-              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/clarifying-back-5-before.png" alt="Back skin before Clarifying Back Treatment" loading="lazy" width="767" height="991" />
             </div>
-            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Before and after comparison 2" tabindex="0">
+            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Clarifying Back Treatment before and after comparison" tabindex="0">
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">Use similar lighting and framing for the clearest comparison.</p>
+          <p class="ba-card__caption">Deep cleansing for the back. Compare congestion and marks before treatment with smoother, clarified-looking skin after.</p>
         </article>
         <article class="ba-card reveal" data-reveal data-reveal-delay="2">
-          <h3 class="ba-card__label">Result 3</h3>
+          <h3 class="ba-card__label">Customized Treatment</h3>
           <div class="compare" data-compare>
             <div class="compare__after" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/customized-treatment-3-after.png" alt="Skin after a customized facial treatment, refreshed, hydrated look" loading="lazy" width="754" height="1024" />
             </div>
             <div class="compare__before" data-compare-before>
-              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/customized-treatment-3-before.png" alt="Skin before customized facial treatment" loading="lazy" width="777" height="1010" />
             </div>
-            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Before and after comparison 3" tabindex="0">
+            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Customized Treatment before and after comparison" tabindex="0">
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">Placeholder photos — swap for your client’s before and after.</p>
+          <p class="ba-card__caption">Tailored care for your skin. Compare texture and tone before with a brighter, more balanced look after your visit.</p>
         </article>
         <article class="ba-card reveal" data-reveal>
-          <h3 class="ba-card__label">Result 4</h3>
+          <h3 class="ba-card__label">Anti-Aging Treatment</h3>
           <div class="compare" data-compare>
             <div class="compare__after" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/anti-aging-4-after.png" alt="Skin after Anti-Aging facial treatment, firmer, smoother appearance" loading="lazy" width="796" height="1024" />
             </div>
             <div class="compare__before" data-compare-before>
-              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/anti-aging-4-before.png" alt="Skin before Anti-Aging facial treatment" loading="lazy" width="773" height="1024" />
             </div>
-            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Before and after comparison 4" tabindex="0">
+            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Anti-Aging Treatment before and after comparison" tabindex="0">
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">Optional short label here (for example, treatment type or weeks apart).</p>
+          <p class="ba-card__caption">Targeted firming and rejuvenation. Compare lines, texture, and overall skin quality before and after your session.</p>
         </article>
         <article class="ba-card reveal" data-reveal data-reveal-delay="1">
-          <h3 class="ba-card__label">Result 5</h3>
+          <h3 class="ba-card__label">Gentlemen's Treatment</h3>
           <div class="compare" data-compare>
             <div class="compare__after" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/gentlemens-treatment-6-after.png" alt="Skin after Gentlemen's facial treatment, calmer, smoother beard area" loading="lazy" width="570" height="722" />
             </div>
             <div class="compare__before" data-compare-before>
-              <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/gentlemens-treatment-6-before.png" alt="Skin before Gentlemen's facial treatment" loading="lazy" width="789" height="965" />
             </div>
-            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Before and after comparison 5" tabindex="0">
+            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Gentlemen's Treatment before and after comparison" tabindex="0">
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">Placeholder photos — swap for your client’s before and after.</p>
+          <p class="ba-card__caption">Tailored for men’s skin. Compare irritation and razor bumps before with a calmer, clarified look after your treatment.</p>
         </article>
         <article class="ba-card reveal" data-reveal data-reveal-delay="2">
-          <h3 class="ba-card__label">Result 6</h3>
+          <h3 class="ba-card__label">Acne Clarification</h3>
           <div class="compare" data-compare>
             <div class="compare__after" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/acne-clarification-2-after.png" alt="Skin after Acne Clarification treatment, clearer, calmer complexion" loading="lazy" width="773" height="1024" />
             </div>
             <div class="compare__before" data-compare-before>
-              <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=900&q=80" alt="" loading="lazy" width="900" height="900" />
+              <img src="images/acne-clarification-2-before.png" alt="Skin before Acne Clarification treatment" loading="lazy" width="779" height="1024" />
             </div>
-            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Before and after comparison 6" tabindex="0">
+            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Acne Clarification before and after comparison" tabindex="0">
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">Duplicate any <code class="ba-card__code">article.ba-card</code> block if you need more than six.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section policies" id="policies" aria-labelledby="policies-heading">
-      <div class="section__header reveal" data-reveal>
-        <h2 id="policies-heading" class="section__title section__title--split">
-          <span class="script">Booking</span> <span class="caps serif">Policies</span>
-        </h2>
-      </div>
-      <div class="policies__grid">
-        <article class="policy-card reveal" data-reveal>
-          <div class="policy-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M5 13h22M11 5v4M21 5v4"/></svg>
-          </div>
-          <h3>Appointments</h3>
-          <p>Appointments must be scheduled at least 5 days in advance to ensure availability. Same-day or next-day bookings are not guaranteed.</p>
-        </article>
-        <article class="policy-card reveal" data-reveal data-reveal-delay="1">
-          <div class="policy-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="16" cy="16" r="12"/><text x="16" y="21" text-anchor="middle" font-size="14" font-family="Georgia,serif" fill="currentColor" stroke="none">$</text></svg>
-          </div>
-          <h3>Payment</h3>
-          <p>A non-refundable deposit is required to secure your appointment. The remaining balance is due at the time of your appointment.</p>
-        </article>
-        <article class="policy-card reveal" data-reveal data-reveal-delay="2">
-          <div class="policy-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="16" cy="16" r="12"/><path d="M16 10v6l4 2"/></svg>
-          </div>
-          <h3>Late policy</h3>
-          <p>A 10-minute grace period is allowed for all appointments. After 10 minutes, your appointment may be shortened or canceled depending on availability.</p>
-        </article>
-        <article class="policy-card reveal" data-reveal>
-          <div class="policy-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="16" cy="11" r="4"/><path d="M8 26c0-5 4-8 8-8s8 3 8 8"/></svg>
-          </div>
-          <h3>Guests</h3>
-          <p>For safety and professionalism, no extra guests are allowed during your appointment — unless approved beforehand.</p>
-        </article>
-        <article class="policy-card reveal" data-reveal data-reveal-delay="1">
-          <div class="policy-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="16" cy="16" r="12"/><path d="M12 12l8 8M20 12l-8 8"/></svg>
-          </div>
-          <h3>Cancellation</h3>
-          <p>You must cancel or reschedule at least 24 hours before your appointment. Late cancellations will result in a fee or forfeiture of your deposit.</p>
+          <p class="ba-card__caption">Compare active congestion and breakouts before treatment with clearer, calmer-looking skin afterward.</p>
         </article>
       </div>
     </section>
@@ -330,66 +288,81 @@
     </section>
   </main>
 
-  <footer class="footer" id="contact">
-    <div class="footer__grid">
-      <div class="footer__box footer__box--wide reveal" data-reveal>
-        <h2 class="footer__title"><span class="script">Business</span> <span class="caps">Hours</span></h2>
-        <dl class="footer__hours">
-          <div><dt>Monday - Friday</dt><dd>9:00 AM - 5:00 PM</dd></div>
-          <div><dt>Saturday</dt><dd>10:00 AM - 4:00 PM</dd></div>
+  <footer class="footer site-footer" id="contact">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand reveal" data-reveal>
+        <a class="wordmark wordmark--footer" href="index.html#top" aria-label="PK Beauty home">
+          <span class="wordmark__pk">PK</span>
+          <span class="wordmark__beauty">Beauty</span>
+        </a>
+        <p class="site-footer__tagline">Empowering you to feel confident in your own skin.</p>
+        <p class="site-footer__label">Licensed Esthetician</p>
+        <p class="site-footer__about">Personalized skincare and waxing in Trumbull, Connecticut. A balanced approach where effective results meet calm, intentional relaxation.</p>
+        <ul class="site-footer__socials">
+          <li>
+            <a class="site-footer__social" href="https://instagram.com/pkbeauty2025" target="_blank" rel="noopener noreferrer" aria-label="Instagram, @pkbeauty2025">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="site-footer__social" href="#" aria-label="Facebook, add your page URL">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="site-footer__col reveal" data-reveal data-reveal-delay="1" aria-label="Site navigation">
+        <h2 class="site-footer__heading">Explore</h2>
+        <ul class="site-footer__links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">Book Online</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__col reveal" data-reveal data-reveal-delay="2">
+        <h2 class="site-footer__heading">Visit</h2>
+        <ul class="site-footer__contact">
+          <li>
+            <span class="site-footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <span>
+              Trumbull, Connecticut
+              <span class="site-footer__contact-sub">Address shared upon booking</span>
+            </span>
+          </li>
+          <li>
+            <span class="site-footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.5 0 1 .4 1 1V20c0 .5-.4 1-1 1C10.6 21 3 13.4 3 4c0-.5.4-1 1-1h3.5c.5 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            </span>
+            <a href="tel:" aria-label="Phone, add your number">Add your phone number</a>
+          </li>
+          <li>
+            <span class="site-footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </span>
+            <a href="mailto:pkbeauty25@icloud.com">pkbeauty25@icloud.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col reveal" data-reveal data-reveal-delay="2">
+        <h2 class="site-footer__heading">Hours</h2>
+        <dl class="site-footer__hours">
+          <div><dt>Mon to Fri</dt><dd>9:00 AM to 5:00 PM</dd></div>
+          <div><dt>Saturday</dt><dd>10:00 AM to 4:00 PM</dd></div>
           <div><dt>Sunday</dt><dd>Closed</dd></div>
         </dl>
       </div>
-      <div class="footer__stack">
-        <div class="footer__box reveal" data-reveal data-reveal-delay="1">
-          <h2 class="footer__title"><span class="script">Contact</span> <span class="caps">Info</span></h2>
-          <ul class="footer__contacts">
-            <li>
-              <a class="icon-link" href="tel:" aria-label="Phone — add your number in HTML">
-                <span class="icon-link__circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.5 0 1 .4 1 1V20c0 .5-.4 1-1 1C10.6 21 3 13.4 3 4c0-.5.4-1 1-1h3.5c.5 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
-                </span>
-                <span>Add your phone</span>
-              </a>
-            </li>
-            <li>
-              <a class="icon-link" href="mailto:pkbeauty25@icloud.com">
-                <span class="icon-link__circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                </span>
-                pkbeauty25@icloud.com
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__box reveal" data-reveal data-reveal-delay="2">
-          <h2 class="footer__title"><span class="script">Socials</span> <span class="caps">Info</span></h2>
-          <ul class="footer__socials">
-            <li>
-              <a class="icon-link" href="https://instagram.com/pkbeauty2025" target="_blank" rel="noopener noreferrer">
-                <span class="icon-link__circle icon-link__circle--ig" aria-hidden="true"></span>
-                @pkbeauty2025
-              </a>
-            </li>
-            <li>
-              <a class="icon-link" href="#" aria-label="Facebook — add your page URL">
-                <span class="icon-link__circle icon-link__circle--fb" aria-hidden="true"></span>
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a class="icon-link" href="#" aria-label="Website — add your full URL">
-                <span class="icon-link__circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                </span>
-                Website
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <p class="footer__legal">© <span id="year"></span> PK Beauty · Trumbull, Connecticut</p>
+
+    <div class="site-footer__bar">
+      <p class="site-footer__legal">© <span id="year"></span> PK Beauty · Trumbull, Connecticut</p>
+    </div>
   </footer>
 
   <script src="js/main.js" defer></script>
