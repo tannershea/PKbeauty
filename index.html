@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PK Beauty | Paulina | Esthetician | Trumbull, CT</title>
   <meta name="description" content="PK Beauty offers personalized skincare in Trumbull, Connecticut. Book your appointment with licensed esthetician Paulina." />
-  <link rel="preload" href="images/hero-welcome.png" as="image" />
+  <link rel="preload" href="images/pkbeauty-hero-cream.png" as="image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
@@ -14,9 +14,8 @@
 <body>
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary">
-      <a class="nav__brand wordmark wordmark--nav" href="#top" aria-label="PK Beauty home">
-        <span class="wordmark__pk">PK</span>
-        <span class="wordmark__beauty">Beauty</span>
+      <a class="nav__brand nav__brand-logo" href="#top" aria-label="PK Beauty home">
+        <img src="images/pkbeauty-logo.png" alt="" width="486" height="312" decoding="async" />
       </a>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
         <span class="nav__toggle-bar"></span>
@@ -38,17 +37,25 @@
     <section class="hero hero--brand" aria-labelledby="hero-heading">
       <div class="hero__brand-backdrop" aria-hidden="true"></div>
       <h1 id="hero-heading" class="visually-hidden">PK Beauty. Welcome to my booking site. Located in Trumbull, Connecticut.</h1>
-      <div class="hero__brand-inner reveal">
+      <div class="hero__brand-inner reveal" data-reveal>
         <img
           class="hero__brand-img"
-          src="images/hero-welcome.png"
+          src="images/pkbeauty-hero-cream.png"
           alt="Welcome to my booking site. PK Beauty, located in Trumbull, Connecticut."
-          width="672"
-          height="418"
+          width="755"
+          height="429"
           decoding="async"
           fetchpriority="high"
         />
       </div>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--compact" href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">
+          Book online
+        </a>
+        <a class="hero__text-link" href="#services">Browse treatments</a>
+        <a class="hero__text-link hero__text-link--soft" href="#book">Pick a time</a>
+      </div>
+      <p class="hero__trust reveal">Licensed esthetician in Trumbull, CT. Secure online scheduling.</p>
     </section>
 
     <section class="section about" id="about" aria-labelledby="about-heading">
@@ -74,6 +81,12 @@
             <p>Hi, I'm a licensed esthetician offering personalized skincare treatments to help you achieve healthy, glowing skin. I take a balanced approach that focuses on effective results and relaxation.</p>
             <p>My goal is to support and motivate each person to stay committed, trust the process, and feel confident in the steps they are taking toward self-improvement.</p>
           </div>
+          <div class="about__actions reveal" data-reveal data-reveal-delay="2">
+            <a class="btn btn--outline btn--compact" href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">
+              Schedule a visit
+            </a>
+            <a class="about__text-link" href="about.html">More about Paulina</a>
+          </div>
         </div>
       </div>
     </section>
@@ -83,29 +96,41 @@
         <h2 id="services-heading" class="section__title section__title--split">
           <span class="script">Treatments</span> <span class="caps">Services</span>
         </h2>
-        <p class="section__lede">Personalized care tailored to your skin goals.</p>
+        <p class="section__lede">Thoughtful skincare in Trumbull, with relaxation and results from day one.</p>
       </div>
       <ul class="services__list">
-        <li class="service-card reveal" data-reveal>
-          <h3>Custom facials</h3>
-          <p>Deep cleansing, exfoliation, and nourishment for your unique skin type.</p>
+        <li class="reveal" data-reveal>
+          <a class="service-card" href="services.html#treatments">
+            <h3>Custom facials</h3>
+            <p>Deep cleansing, exfoliation, and nourishment for your unique skin type.</p>
+            <span class="service-card__hint">Browse menu</span>
+          </a>
         </li>
-        <li class="service-card reveal" data-reveal data-reveal-delay="1">
-          <h3>Advanced skincare</h3>
-          <p>Targeted protocols to support clarity, tone, and a healthy glow over time.</p>
+        <li class="reveal" data-reveal data-reveal-delay="1">
+          <a class="service-card" href="services.html#treatments">
+            <h3>Advanced skincare</h3>
+            <p>Targeted protocols to support clarity, tone, and a healthy glow over time.</p>
+            <span class="service-card__hint">Browse menu</span>
+          </a>
         </li>
-        <li class="service-card reveal" data-reveal data-reveal-delay="2">
-          <h3>Waxing</h3>
-          <p>Smooth, precise hair removal with attention to comfort and skin integrity.</p>
+        <li class="reveal" data-reveal data-reveal-delay="2">
+          <a class="service-card" href="services.html#waxing">
+            <h3>Waxing</h3>
+            <p>Smooth, precise hair removal with attention to comfort and skin integrity.</p>
+            <span class="service-card__hint">Browse waxing</span>
+          </a>
         </li>
-        <li class="service-card reveal" data-reveal>
-          <h3>Relaxation-focused care</h3>
-          <p>Calming touch and ambiance so you leave feeling renewed inside and out.</p>
+        <li class="reveal" data-reveal>
+          <a class="service-card" href="services.html#treatments">
+            <h3>Relaxation-focused care</h3>
+            <p>Calming touch and ambiance so you leave feeling renewed inside and out.</p>
+            <span class="service-card__hint">Browse menu</span>
+          </a>
         </li>
       </ul>
       <div class="services__more reveal" data-reveal>
         <a class="services__more-link" href="services.html">
-          View full menu &amp; pricing
+          Full menu &amp; pricing
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -117,6 +142,7 @@
           <span class="script">Waxing</span> <span class="caps serif">Services</span>
         </h2>
         <p class="section__lede">Before and after results from brow and body waxing.</p>
+        <p class="section__hint">Tap a photo to enlarge.</p>
       </div>
       <div class="gallery__grid">
         <figure class="gallery__item reveal" data-reveal>
@@ -151,6 +177,11 @@
         <h2 id="prep-heading" class="section__title section__title--split">
           <span class="script">Before your</span> <span class="caps serif">Appointment</span>
         </h2>
+        <p class="section__lede">
+          Quick tips so your visit goes smoothly. Still have questions before you book?
+          <a class="inline-link" href="mailto:pkbeauty25@icloud.com">Send an email</a>
+          anytime.
+        </p>
       </div>
       <ol class="prep__grid">
         <li class="prep__item reveal" data-reveal><span class="prep__num">01</span> Please arrive 5-10 minutes early to allow time for check-in and consultation.</li>
@@ -167,23 +198,25 @@
         <h2 id="ba-heading" class="section__title section__title--split">
           <span class="script">Before</span> <span class="caps serif">&amp; after</span>
         </h2>
-        <p class="section__lede">Drag the handle to compare. Replace each pair with your own client photos when you are ready.</p>
+        <p class="section__lede">
+          Slide each marker to see the after. Real results from tailored treatments at PK Beauty.
+        </p>
       </div>
       <div class="ba__grid">
         <article class="ba-card reveal" data-reveal>
-          <h3 class="ba-card__label">Microderm Abrasion</h3>
+          <h3 class="ba-card__label">Microdermabrasion</h3>
           <div class="compare" data-compare>
             <div class="compare__after" aria-hidden="true">
-              <img src="images/microderm-1-after.png" alt="Skin after Microderm Abrasion treatment, smoother, more refined texture" loading="lazy" width="726" height="912" />
+              <img src="images/microderm-1-after.png" alt="Skin after Microdermabrasion treatment, smoother, more refined texture" loading="lazy" width="726" height="912" />
             </div>
             <div class="compare__before" data-compare-before>
-              <img src="images/microderm-1-before.png" alt="Skin before Microderm Abrasion treatment" loading="lazy" width="757" height="903" />
+              <img src="images/microderm-1-before.png" alt="Skin before Microdermabrasion treatment" loading="lazy" width="757" height="903" />
             </div>
-            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Microderm Abrasion before and after comparison" tabindex="0">
+            <div class="compare__handle" data-compare-handle role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Microdermabrasion before and after comparison" tabindex="0">
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">Drag the handle to reveal smoother, more refined skin after a Microderm Abrasion treatment.</p>
+          <p class="ba-card__caption">Slide or drag the handle to reveal smoother, more refined skin after a Microdermabrasion treatment.</p>
         </article>
         <article class="ba-card reveal" data-reveal data-reveal-delay="1">
           <h3 class="ba-card__label">Clarifying Back Treatment</h3>
@@ -243,7 +276,7 @@
               <span class="compare__grip"></span>
             </div>
           </div>
-          <p class="ba-card__caption">Tailored for men’s skin. Compare irritation and razor bumps before with a calmer, clarified look after your treatment.</p>
+          <p class="ba-card__caption">Tailored for men's skin. Compare irritation and razor bumps before with a calmer, clarified look after your treatment.</p>
         </article>
         <article class="ba-card reveal" data-reveal data-reveal-delay="2">
           <h3 class="ba-card__label">Acne Clarification</h3>
@@ -266,9 +299,16 @@
     <section class="section book" id="book" aria-labelledby="book-heading">
       <div class="book__inner reveal" data-reveal>
         <h2 id="book-heading" class="section__title section__title--script">Ready for glowing skin?</h2>
-        <p class="book__text">Secure your visit in Trumbull. Add your Square booking link below for one-click scheduling.</p>
-        <a class="btn btn--primary" href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">Book your appointment</a>
-        <p class="book__hint">Replace the button URL with your real Square (or other) booking page.</p>
+        <p class="book__text">Pick a time below. You'll get confirmation right away. Serving Trumbull and nearby Fairfield County.</p>
+        <a class="btn btn--primary btn--lg" href="https://squareup.com/appointments" target="_blank" rel="noopener noreferrer">Reserve your appointment</a>
+        <p class="book__footnote">
+          Not sure where to start? <a class="inline-link" href="contact.html">Get in touch</a>. I'm happy to help you pick the right treatment.
+        </p>
+        <p class="book__extras">
+          <a class="book__extras-link" href="services.html#treatments">Full treatment list</a>
+          <span class="book__extras-dot" aria-hidden="true"></span>
+          <a class="book__extras-link" href="#before-after">See results</a>
+        </p>
       </div>
     </section>
   </main>
@@ -276,9 +316,8 @@
   <footer class="footer site-footer" id="contact">
     <div class="site-footer__grid">
       <div class="site-footer__brand reveal" data-reveal>
-        <a class="wordmark wordmark--footer" href="index.html#top" aria-label="PK Beauty home">
-          <span class="wordmark__pk">PK</span>
-          <span class="wordmark__beauty">Beauty</span>
+        <a class="site-footer__logo" href="index.html#top" aria-label="PK Beauty home">
+          <img src="images/pkbeauty-logo.png" alt="" width="486" height="312" decoding="async" />
         </a>
         <p class="site-footer__tagline">Empowering you to feel confident in your own skin.</p>
         <p class="site-footer__label">Licensed Esthetician</p>
@@ -338,15 +377,15 @@
       <div class="site-footer__col reveal" data-reveal data-reveal-delay="2">
         <h2 class="site-footer__heading">Hours</h2>
         <dl class="site-footer__hours">
-          <div><dt>Mon to Fri</dt><dd>9:00 AM to 5:00 PM</dd></div>
-          <div><dt>Saturday</dt><dd>10:00 AM to 4:00 PM</dd></div>
+          <div><dt>Mon - Fri</dt><dd>9:00 AM - 5:00 PM</dd></div>
+          <div><dt>Saturday</dt><dd>10:00 AM - 4:00 PM</dd></div>
           <div><dt>Sunday</dt><dd>Closed</dd></div>
         </dl>
       </div>
     </div>
 
     <div class="site-footer__bar">
-      <p class="site-footer__legal">© <span id="year"></span> PK Beauty · Trumbull, Connecticut</p>
+      <p class="site-footer__legal">© <span id="year"></span> PK Beauty, Trumbull, Connecticut</p>
     </div>
   </footer>
 

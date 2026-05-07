@@ -1,7 +1,6 @@
 (function () {
   "use strict";
 
-  var header = document.querySelector(".site-header");
   var navToggle = document.querySelector(".nav__toggle");
   var navMenu = document.getElementById("nav-menu");
   var yearEl = document.getElementById("year");
@@ -9,18 +8,6 @@
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
-
-  function onScroll() {
-    if (!header) return;
-    if (window.scrollY > 40) {
-      header.classList.add("is-solid");
-    } else {
-      header.classList.remove("is-solid");
-    }
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
 
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", function () {
