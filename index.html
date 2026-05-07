@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PK Beauty | Paulina | Esthetician | Trumbull, CT</title>
   <meta name="description" content="PK Beauty offers personalized skincare in Trumbull, Connecticut. Book your appointment with licensed esthetician Paulina." />
+  <link rel="preload" href="images/hero-welcome.png" as="image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
@@ -34,42 +35,20 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero__bg" aria-hidden="true">
-        <span class="hero__orb hero__orb--1"></span>
-        <span class="hero__orb hero__orb--2"></span>
-        <span class="hero__orb hero__orb--3"></span>
-        <svg class="hero__lines" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="heroLineA" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#b5a48b" stop-opacity="0" />
-              <stop offset="50%" stop-color="#b5a48b" stop-opacity="0.55" />
-              <stop offset="100%" stop-color="#b5a48b" stop-opacity="0" />
-            </linearGradient>
-            <linearGradient id="heroLineB" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#c9b8a0" stop-opacity="0" />
-              <stop offset="50%" stop-color="#c9b8a0" stop-opacity="0.4" />
-              <stop offset="100%" stop-color="#c9b8a0" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-          <path class="hero__line hero__line--1" d="M -40 540 C 220 460 460 660 720 520 C 940 410 1080 520 1260 460" stroke="url(#heroLineA)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-          <path class="hero__line hero__line--2" d="M -40 220 C 240 360 460 140 740 280 C 940 380 1080 220 1260 320" stroke="url(#heroLineB)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-        </svg>
-        <span class="hero__petal" style="--x:8%; --y:22%; --d:0s; --r:14s;"></span>
-        <span class="hero__petal" style="--x:18%; --y:78%; --d:-3s; --r:18s;"></span>
-        <span class="hero__petal" style="--x:32%; --y:42%; --d:-7s; --r:20s;"></span>
-        <span class="hero__petal" style="--x:62%; --y:18%; --d:-2s; --r:16s;"></span>
-        <span class="hero__petal" style="--x:74%; --y:64%; --d:-10s; --r:22s;"></span>
-        <span class="hero__petal" style="--x:88%; --y:32%; --d:-5s; --r:19s;"></span>
-        <span class="hero__petal" style="--x:46%; --y:84%; --d:-12s; --r:24s;"></span>
-        <span class="hero__petal" style="--x:54%; --y:8%; --d:-6s; --r:17s;"></span>
+    <section class="hero hero--brand" aria-labelledby="hero-heading">
+      <div class="hero__brand-backdrop" aria-hidden="true"></div>
+      <h1 id="hero-heading" class="visually-hidden">PK Beauty. Welcome to my booking site. Located in Trumbull, Connecticut.</h1>
+      <div class="hero__brand-inner reveal">
+        <img
+          class="hero__brand-img"
+          src="images/hero-welcome.png"
+          alt="Welcome to my booking site. PK Beauty, located in Trumbull, Connecticut."
+          width="672"
+          height="418"
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
-      <p class="hero__kicker reveal">Welcome to my booking site</p>
-      <h1 id="hero-heading" class="hero__title wordmark wordmark--hero reveal" data-hero-delay="1">
-        <span class="wordmark__pk">PK</span>
-        <span class="wordmark__beauty">Beauty</span>
-      </h1>
-      <p class="hero__location reveal" data-hero-delay="2">Located in Trumbull, Connecticut</p>
     </section>
 
     <section class="section about" id="about" aria-labelledby="about-heading">
