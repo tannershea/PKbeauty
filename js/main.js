@@ -186,6 +186,19 @@
   }
 
   /* Contact form — opens user's email client with a prefilled message */
+  var serviceSelect = document.getElementById("cf-service");
+  if (serviceSelect) {
+    var serviceParam = new URLSearchParams(window.location.search).get("service");
+    if (serviceParam) {
+      var needle = serviceParam.trim().toLowerCase();
+      Array.prototype.forEach.call(serviceSelect.options, function (opt) {
+        if (opt.value && opt.text.trim().toLowerCase().indexOf(needle) === 0) {
+          serviceSelect.value = opt.value;
+        }
+      });
+    }
+  }
+
   var contactForm = document.querySelector("[data-contact-form]");
   if (contactForm) {
     var status = contactForm.querySelector("[data-contact-status]");
