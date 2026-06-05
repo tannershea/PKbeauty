@@ -2898,6 +2898,10 @@ main section[id] {
   background: #5c4a38;
 }
 
+.contact-methods__icon--tt {
+  background: #4b3621;
+}
+
 .contact-methods a:hover .contact-methods__icon {
   transform: scale(1.06);
 }

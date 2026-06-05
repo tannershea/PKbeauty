@@ -43,7 +43,7 @@ pk-beauty/
 
 ## Customize
 
-- **Booking link:** in `index.html`, replace the `https://squareup.com/appointments` URL on the main CTA and any "Book now" links.
+- **Booking link:** in `index.html`, replace the `https://book.squareup.com/appointments/fhh6s1mq1upyn2/location/L5X424STNNM6Y/services` URL on the main CTA and any "Book now" links.
 - **Portrait:** swap `images/paulina.jpg` (3:4 portrait recommended).
 - **Before/after photos:** replace each pair's `<img src>` inside `.compare__after` and `.compare__before`.
 - **Contact / socials:** update phone, email, Instagram, Facebook in the footer block.
