@@ -608,10 +608,14 @@ main section[id] {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
-  transform: scale(1.7);
-  transform-origin: center 25%;
   display: block;
+}
+
+/* Home page — bust shot with headroom (matches arch framing) */
+.about__photo--portrait {
+  object-position: center 27%;
+  transform: scale(1.72);
+  transform-origin: center 27%;
 }
 
 .about__photo--studio {
@@ -3302,8 +3306,15 @@ main section[id] {
     transition: none !important;
   }
 
-  .about__photo:not(.about__photo--studio) {
-    transform: none;
+  /* Same bust-shot crop as desktop — do not strip transform on mobile */
+  .about__photo--portrait {
+    object-position: center 27%;
+    transform: scale(1.72);
+    transform-origin: center 27%;
+  }
+
+  .about__arch {
+    max-width: min(340px, 88vw);
   }
 
   .service-card:hover,
