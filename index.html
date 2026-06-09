@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var ua = navigator.userAgent || "";
+      if (
+        window.innerWidth <= 1040 ||
+        window.matchMedia("(hover: none)").matches ||
+        /Instagram|FBAN|FBAV|FB_IAB/i.test(ua)
+      ) {
+        document.documentElement.classList.add("reduce-scroll-fx");
+      }
+    })();
+  </script>
   <title>PK Beauty | Paulina | Esthetician | Trumbull, CT</title>
   <meta name="description" content="PK Beauty offers personalized skincare in Trumbull, Connecticut. Book your appointment with licensed esthetician Paulina." />
   <link rel="preload" href="images/pkbeauty-hero-cream.png" as="image" />
@@ -323,7 +335,7 @@
           <div class="google-profile__map">
             <iframe
               title="PKbeauty LLC on Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2!2d-73.2282133!3d41.2775266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e809401d43a53b%3A0xf8e1c634866c1889!2sPKbeauty%20LLC!5e0!3m2!1sen!2sus!4v1749081600000!5m2!1sen!2sus"
+              data-embed-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2!2d-73.2282133!3d41.2775266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e809401d43a53b%3A0xf8e1c634866c1889!2sPKbeauty%20LLC!5e0!3m2!1sen!2sus!4v1749081600000!5m2!1sen!2sus"
               width="600"
               height="360"
               style="border:0;"

@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var ua = navigator.userAgent || "";
+      if (
+        window.innerWidth <= 1040 ||
+        window.matchMedia("(hover: none)").matches ||
+        /Instagram|FBAN|FBAV|FB_IAB/i.test(ua)
+      ) {
+        document.documentElement.classList.add("reduce-scroll-fx");
+      }
+    })();
+  </script>
   <title>Skin Types Guide | PK Beauty | Trumbull, CT</title>
   <meta name="description" content="Find your skin type—oily, combination, dry, sensitive, rosacea, mature, or acne-prone—and see how PK Beauty in Trumbull can help with tailored facials and peels." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

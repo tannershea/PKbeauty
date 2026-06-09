@@ -2867,6 +2867,10 @@ main section[id] {
   height: clamp(280px, 42vw, 360px);
 }
 
+.google-profile__map-load {
+  display: none;
+}
+
 .google-profile__actions {
   display: flex;
   flex-wrap: wrap;
@@ -3250,10 +3254,36 @@ main section[id] {
   transform: translateY(0);
 }
 
-/* Phones + in-app browsers (Instagram link, etc.): no slide-in reveals while scrolling */
-@media (hover: none) and (pointer: coarse) {
+/* Mobile + in-app browsers (Instagram link, etc.): calmer scroll, no slide-in FX */
+@media (max-width: 1040px) {
   html {
     scroll-behavior: auto;
+    overscroll-behavior-y: none;
+  }
+
+  body {
+    touch-action: pan-y;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .hero,
+  .hero.hero--brand {
+    min-height: auto;
+  }
+
+  .hero,
+  .hero.hero--brand {
+    padding-top: 1.25rem;
+  }
+
+  .page-hero {
+    padding-top: 2.5rem;
   }
 
   .reveal,
@@ -3272,10 +3302,53 @@ main section[id] {
     transition: none !important;
   }
 
-  .site-header {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+  .about__photo:not(.about__photo--studio) {
+    transform: none;
   }
+
+  .service-card:hover,
+  .gallery__frame:hover,
+  .gallery__item:hover .gallery__frame,
+  .policy-card:hover,
+  .audience-card:hover,
+  .treatment:hover,
+  .skin-card:hover,
+  .ba-card:hover,
+  .nav__brand-logo:hover {
+    transform: none !important;
+  }
+
+  .gallery__frame img {
+    transition: none !important;
+  }
+
+  .google-profile__map iframe:not(.is-active) {
+    display: none;
+  }
+
+  .google-profile__map-load {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: clamp(200px, 38vw, 280px);
+    margin: 0;
+  }
+}
+
+html.reduce-scroll-fx {
+  scroll-behavior: auto;
+}
+
+html.reduce-scroll-fx .reveal,
+html.reduce-scroll-fx .reveal.is-visible,
+html.reduce-scroll-fx .hero .reveal,
+html.reduce-scroll-fx .hero.is-loaded .reveal,
+html.reduce-scroll-fx .hero__actions,
+html.reduce-scroll-fx .hero.is-loaded .hero__actions {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

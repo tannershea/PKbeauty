@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var ua = navigator.userAgent || "";
+      if (
+        window.innerWidth <= 1040 ||
+        window.matchMedia("(hover: none)").matches ||
+        /Instagram|FBAN|FBAV|FB_IAB/i.test(ua)
+      ) {
+        document.documentElement.classList.add("reduce-scroll-fx");
+      }
+    })();
+  </script>
   <title>Services & Pricing | PK Beauty | Trumbull, CT</title>
   <meta name="description" content="Full menu of skincare treatments, waxing services and add-ons at PK Beauty in Trumbull, Connecticut." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

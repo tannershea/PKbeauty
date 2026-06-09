@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var ua = navigator.userAgent || "";
+      if (
+        window.innerWidth <= 1040 ||
+        window.matchMedia("(hover: none)").matches ||
+        /Instagram|FBAN|FBAV|FB_IAB/i.test(ua)
+      ) {
+        document.documentElement.classList.add("reduce-scroll-fx");
+      }
+    })();
+  </script>
   <title>About | PK Beauty | Paulina, Esthetician | Trumbull, CT</title>
   <meta name="description" content="Meet Paulina, licensed esthetician at PK Beauty in Trumbull, Connecticut. My philosophy, mission, and the clients I love helping most." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

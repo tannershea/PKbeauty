@@ -1,6 +1,20 @@
 (function () {
   "use strict";
 
+  function shouldReduceScrollEffects() {
+    var ua = navigator.userAgent || "";
+    return (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      window.innerWidth <= 1040 ||
+      window.matchMedia("(hover: none)").matches ||
+      /Instagram|FBAN|FBAV|FB_IAB/i.test(ua)
+    );
+  }
+
+  if (shouldReduceScrollEffects()) {
+    document.documentElement.classList.add("reduce-scroll-fx");
+  }
+
   var navToggle = document.querySelector(".nav__toggle");
   var navMenu = document.getElementById("nav-menu");
   var yearEl = document.getElementById("year");
@@ -31,13 +45,12 @@
     document.querySelector(".hero")?.classList.add("is-loaded");
   });
 
-  /* Scroll reveal — skip on touch / in-app browsers (Instagram, etc.) to avoid scroll jank */
+  /* Scroll reveal — skip on mobile / in-app browsers (Instagram, etc.) to avoid scroll jank */
   var revealEls = document.querySelectorAll(".reveal[data-reveal]");
-  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var isCoarseTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+  var reduceScrollFx = document.documentElement.classList.contains("reduce-scroll-fx");
 
   if (revealEls.length) {
-    if (prefersReducedMotion || isCoarseTouch || !("IntersectionObserver" in window)) {
+    if (reduceScrollFx || !("IntersectionObserver" in window)) {
       revealEls.forEach(function (el) {
         el.classList.add("is-visible");
       });
@@ -203,6 +216,34 @@
       });
     }
   }
+
+  /* Google Maps: load on desktop only; tap-to-load on mobile / Instagram */
+  document.querySelectorAll(".google-profile__map iframe[data-embed-src]").forEach(function (iframe) {
+    var embedSrc = iframe.getAttribute("data-embed-src");
+    if (!embedSrc) return;
+
+    if (reduceScrollFx) {
+      iframe.setAttribute("tabindex", "-1");
+      iframe.setAttribute("aria-hidden", "true");
+
+      var loadBtn = document.createElement("button");
+      loadBtn.type = "button";
+      loadBtn.className = "google-profile__map-load btn btn--outline btn--compact";
+      loadBtn.textContent = "Load map";
+
+      loadBtn.addEventListener("click", function () {
+        iframe.src = embedSrc;
+        iframe.removeAttribute("aria-hidden");
+        iframe.classList.add("is-active");
+        loadBtn.remove();
+      });
+
+      iframe.parentElement.appendChild(loadBtn);
+      return;
+    }
+
+    iframe.src = embedSrc;
+  });
 
   var contactForm = document.querySelector("[data-contact-form]");
   if (contactForm) {
