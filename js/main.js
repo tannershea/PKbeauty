@@ -31,27 +31,32 @@
     document.querySelector(".hero")?.classList.add("is-loaded");
   });
 
-  /* Scroll reveal */
+  /* Scroll reveal — skip on touch / in-app browsers (Instagram, etc.) to avoid scroll jank */
   var revealEls = document.querySelectorAll(".reveal[data-reveal]");
-  if (revealEls.length && "IntersectionObserver" in window) {
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-    );
-    revealEls.forEach(function (el) {
-      io.observe(el);
-    });
-  } else {
-    revealEls.forEach(function (el) {
-      el.classList.add("is-visible");
-    });
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isCoarseTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+  if (revealEls.length) {
+    if (prefersReducedMotion || isCoarseTouch || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    } else {
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+      );
+      revealEls.forEach(function (el) {
+        io.observe(el);
+      });
+    }
   }
 
   /* Before / after sliders */
